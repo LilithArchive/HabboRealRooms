@@ -11,7 +11,7 @@ Class MainWindow
         If BlockButton.Content.ToString.StartsWith("Bloquear") Then
             Try
                 If IO.File.Exists(GetClientPath() & "\HabboAir_ORIGINAL.swf") = False Then
-                    BackupOriginalClient()
+                    RestoreOriginalClient()
                 End If
                 CopyModdedClient()
             Catch
